@@ -2,25 +2,46 @@ import Link from "next/link";
 
 const pathways = [
   {
-    number: "01",
-    title: "I’m figuring myself out",
-    text: "Start with the signs, the language, and the quiet moments of recognition.",
-    href: "/start-here",
-    color: "butter",
+    symbol: "🧠",
+    title: "Understand AuDHD",
+    text: "Learn what it is, how it shows up, and why it often goes unseen.",
+    href: "/understanding-audhd",
+    color: "coral",
   },
   {
-    number: "02",
-    title: "I’m supporting my child",
-    text: "Practical, affirming guidance for understanding what behavior is communicating.",
+    symbol: "♡",
+    title: "For Adults",
+    text: "Late discovery, masking, burnout, relationships, and living authentically.",
+    href: "/for-adults",
+    color: "purple",
+  },
+  {
+    symbol: "♧",
+    title: "For Parents",
+    text: "Support, strategies, and real-life tools for raising AuDHD kids.",
     href: "/for-parents",
     color: "blue",
   },
   {
-    number: "03",
-    title: "I want the science",
-    text: "Research translated into language you don’t need a doctorate to understand.",
+    symbol: "▤",
+    title: "The Science",
+    text: "Research, explanations, and evidence-based insights in plain English.",
     href: "/the-science",
-    color: "rose",
+    color: "green",
+  },
+  {
+    symbol: "◉",
+    title: "Real Life",
+    text: "Sensory overload, school struggles, medication, and what actually helps.",
+    href: "/resources",
+    color: "yellow",
+  },
+  {
+    symbol: "◯",
+    title: "You’re Not Alone",
+    text: "Stories, community, and a space where you belong.",
+    href: "/start-here",
+    color: "pink",
   },
 ];
 
@@ -35,7 +56,7 @@ export default function Home() {
     <>
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">A calmer place to understand a complicated brain</p>
+          <p className="eyebrow rainbow-text">Hidden. Real. Not alone.</p>
           <h1>You were never<br />too much.<br /><em>You were carrying too much.</em></h1>
           <p className="hero-intro">
             Clear, compassionate information for autistic people with ADHD—and
@@ -47,6 +68,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-art" aria-hidden="true">
+          <div className="hero-glow" />
           <div className="orbit orbit-one" />
           <div className="orbit orbit-two" />
           <div className="sun">✦</div>
@@ -54,6 +76,29 @@ export default function Home() {
           <div className="thought-card card-two">Maybe your brain<br />isn’t broken.</div>
           <span className="spark spark-one">✦</span>
           <span className="spark spark-two">✧</span>
+        </div>
+      </section>
+
+      <section className="support-paths section-wrap">
+        <div className="support-title">
+          <p className="eyebrow">You’ll find support &amp; answers here</p>
+          <div className="heart-rule"><span>♡</span></div>
+        </div>
+        <div className="support-grid">
+          {pathways.map((item) => (
+            <Link className={`support-card ${item.color}`} href={item.href} key={item.title}>
+              <span className="support-symbol" aria-hidden="true">{item.symbol}</span>
+              <h2>{item.title}</h2>
+              <p>{item.text}</p>
+              <span className="card-link">Learn more →</span>
+            </Link>
+          ))}
+        </div>
+        <div className="community-ribbon">
+          <span>♡</span>
+          <p>This community is about connection, validation, and empowerment.</p>
+          <em>Because your story matters.</em>
+          <span>♡</span>
         </div>
       </section>
 
@@ -80,10 +125,10 @@ export default function Home() {
           <p>There is no “right” way to learn about your brain.</p>
         </div>
         <div className="pathway-grid">
-          {pathways.map((item) => (
+          {pathways.slice(0, 3).map((item, index) => (
             <Link className={`pathway-card ${item.color}`} href={item.href} key={item.title}>
-              <span className="card-number">{item.number}</span>
-              <div className="card-symbol" aria-hidden="true">{item.number === "01" ? "〰" : item.number === "02" ? "◡" : "✣"}</div>
+              <span className="card-number">0{index + 1}</span>
+              <div className="card-symbol" aria-hidden="true">{item.symbol}</div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
               <span className="card-link">Explore this path →</span>
