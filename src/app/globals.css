@@ -41,11 +41,11 @@ a { color: inherit; text-decoration: none; }
 .brand { display: flex; align-items: center; gap: .55rem; }
 .header-logo { display: block; width: clamp(220px, 24vw, 340px); height: auto; }
 .footer-horizontal-logo { display: block; width: min(300px, 72vw); height: auto; }
-.site-header nav { display: flex; gap: clamp(1rem, 2.2vw, 2.3rem); font-size: .83rem; font-weight: 650; }
+.site-header nav { display: flex; gap: clamp(1rem, 2.2vw, 2.3rem); font-size: .95rem; font-weight: 650; }
 .site-header nav a { padding: .4rem 0; border-bottom: 2px solid transparent; }
 .site-header nav a:hover { color: #e9679a; border-color: var(--pink); }
 .header-cta {
-  font-size: .8rem;
+  font-size: .92rem;
   padding: .85rem 1.35rem;
   border-radius: 99px;
   font-weight: 700;
@@ -90,7 +90,7 @@ a { color: inherit; text-decoration: none; }
 .hero h1 em { color: #ef6f9e; font-family: var(--font-script), cursive; font-size: 1.12em; font-weight: 500; letter-spacing: 0; }
 .hero-intro { font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.65; max-width: 560px; margin: 2rem 0; color: #3d5669; }
 .hero-actions { display: flex; align-items: center; gap: 2rem; margin-top: 2rem; }
-.button { display: inline-flex; gap: 2.5rem; justify-content: space-between; align-items: center; padding: 1rem 1.4rem; border-radius: 99px; font-size: .85rem; font-weight: 750; }
+.button { display: inline-flex; gap: 2.5rem; justify-content: space-between; align-items: center; padding: 1rem 1.4rem; border-radius: 99px; font-size: .95rem; font-weight: 750; }
 .button.primary {
   color: #e96d9a;
   background: white;
