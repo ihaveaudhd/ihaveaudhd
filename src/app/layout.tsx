@@ -30,14 +30,9 @@ export default function RootLayout({
         <a className="skip-link" href="#main">Skip to content</a>
         <header className="site-header">
           <Link className="brand" href="/" aria-label="I Have AuDHD home">
-            <Image
-              className="brand-logo"
-              src="/brand/circle-logo.png"
-              alt=""
-              width={62}
-              height={62}
-              priority
-            />
+            <span className="brand-icon" aria-hidden="true">
+              <Image className="brand-logo" src="/brand/circle-logo.png" alt="" width={230} height={230} priority />
+            </span>
             <span className="brand-name"><em>i have</em> <strong><i>au</i>DHD</strong></span>
           </Link>
           <nav aria-label="Main navigation">
@@ -51,7 +46,9 @@ export default function RootLayout({
         <footer className="site-footer">
           <div>
             <Link className="brand footer-brand" href="/">
-              <Image className="brand-logo" src="/brand/circle-logo.png" alt="" width={62} height={62} />
+              <span className="brand-icon" aria-hidden="true">
+                <Image className="brand-logo" src="/brand/circle-logo.png" alt="" width={230} height={230} />
+              </span>
               <span className="brand-name"><em>i have</em> <strong><i>au</i>DHD</strong></span>
             </Link>
             <p>Understanding your brain can change how you understand your life.</p>
