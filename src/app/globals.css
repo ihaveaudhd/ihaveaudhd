@@ -39,7 +39,8 @@ a { color: inherit; text-decoration: none; }
   z-index: 10;
 }
 .brand { display: flex; align-items: center; gap: .55rem; }
-.brand-logo { width: 62px; height: 62px; border-radius: 50%; }
+.brand-icon { position: relative; width: 62px; height: 62px; overflow: hidden; flex: 0 0 62px; }
+.brand-logo { position: absolute; width: 230px; height: 230px; max-width: none; left: -116px; top: -43px; }
 .brand-name { display: flex; align-items: baseline; gap: .35rem; white-space: nowrap; }
 .brand-name em { font-family: var(--font-script), cursive; font-size: 2rem; font-weight: 500; line-height: 1; }
 .brand-name strong { font-family: var(--font-heading), sans-serif; font-size: 1.65rem; font-weight: 600; letter-spacing: -.055em; }
@@ -263,7 +264,8 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 600px) {
   .header-cta { display: none; }
   .site-header { min-height: 76px; padding-top: .4rem; padding-bottom: .4rem; }
-  .brand-logo { width: 48px; height: 48px; }
+  .brand-icon { width: 50px; height: 50px; flex-basis: 50px; }
+  .brand-logo { width: 190px; height: 190px; left: -96px; top: -36px; }
   .brand-name em { font-size: 1.55rem; }
   .brand-name strong { font-size: 1.3rem; }
   .hero-copy { padding-top: 4.5rem; }
