@@ -1,43 +1,44 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const pathways = [
   {
-    symbol: "🧠",
+    icon: "/images/icon-brain.png",
     title: "Understand AuDHD",
     text: "Learn what it is, how it shows up, and why it often goes unseen.",
     href: "/understanding-audhd",
     color: "coral",
   },
   {
-    symbol: "♡",
+    icon: "/images/icon-heart.png",
     title: "For Adults",
     text: "Late discovery, masking, burnout, relationships, and living authentically.",
     href: "/for-adults",
     color: "purple",
   },
   {
-    symbol: "♧",
+    icon: "/images/icon-people.png",
     title: "For Parents",
     text: "Support, strategies, and real-life tools for raising AuDHD kids.",
     href: "/for-parents",
     color: "blue",
   },
   {
-    symbol: "▤",
+    icon: "/images/icon-book.png",
     title: "The Science",
     text: "Research, explanations, and evidence-based insights in plain English.",
     href: "/the-science",
     color: "green",
   },
   {
-    symbol: "◉",
+    icon: "/images/icon-headphones.png",
     title: "Real Life",
     text: "Sensory overload, school struggles, medication, and what actually helps.",
     href: "/resources",
     color: "yellow",
   },
   {
-    symbol: "◯",
+    icon: "/images/icon-speech.png",
     title: "You’re Not Alone",
     text: "Stories, community, and a space where you belong.",
     href: "/start-here",
@@ -55,6 +56,14 @@ export default function Home() {
   return (
     <>
       <section className="hero">
+        <Image
+          className="hero-photo"
+          src="/images/home-hero.png"
+          alt="A woman sitting peacefully on a mountain overlooking the sunset"
+          fill
+          priority
+          sizes="100vw"
+        />
         <div className="hero-copy">
           <p className="eyebrow rainbow-text">Hidden. Real. Not alone.</p>
           <h1>You were never<br />too much.<br /><em>You were carrying too much.</em></h1>
@@ -67,16 +76,6 @@ export default function Home() {
             <Link className="text-link" href="/understanding-audhd">What is AuDHD? <span>↗</span></Link>
           </div>
         </div>
-        <div className="hero-art" aria-hidden="true">
-          <div className="hero-glow" />
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
-          <div className="sun">✦</div>
-          <div className="thought-card card-one">“Why can I do hard things<br />but not the simple ones?”</div>
-          <div className="thought-card card-two">Maybe your brain<br />isn’t broken.</div>
-          <span className="spark spark-one">✦</span>
-          <span className="spark spark-two">✧</span>
-        </div>
       </section>
 
       <section className="support-paths section-wrap">
@@ -87,7 +86,7 @@ export default function Home() {
         <div className="support-grid">
           {pathways.map((item) => (
             <Link className={`support-card ${item.color}`} href={item.href} key={item.title}>
-              <span className="support-symbol" aria-hidden="true">{item.symbol}</span>
+              <Image className="support-symbol" src={item.icon} alt="" width={88} height={64} />
               <h2>{item.title}</h2>
               <p>{item.text}</p>
               <span className="card-link">Learn more →</span>
@@ -128,7 +127,7 @@ export default function Home() {
           {pathways.slice(0, 3).map((item, index) => (
             <Link className={`pathway-card ${item.color}`} href={item.href} key={item.title}>
               <span className="card-number">0{index + 1}</span>
-              <div className="card-symbol" aria-hidden="true">{item.symbol}</div>
+              <Image className="card-symbol-image" src={item.icon} alt="" width={140} height={100} />
               <h3>{item.title}</h3>
               <p>{item.text}</p>
               <span className="card-link">Explore this path →</span>
