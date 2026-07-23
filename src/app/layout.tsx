@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "I Have AuDHD",
   description:
     "Clear, compassionate information for autistic people with ADHD—and the people who love them.",
-  icons: { icon: "/brand/circle-logo.png", apple: "/brand/circle-logo.png" },
+  icons: { icon: "/brand/favicon-brain.png", apple: "/brand/favicon-brain.png" },
 };
 
 const nav = [
@@ -31,7 +31,7 @@ export default function RootLayout({
         <a className="skip-link" href="#main">Skip to content</a>
         <header className="site-header">
           <Link className="brand" href="/" aria-label="I Have AuDHD home">
-            <span className="brand-name"><em>i have</em> <strong><i>au</i>DHD</strong></span>
+            <Image className="header-logo" src="/brand/header-logo.png" alt="I Have AuDHD" width={370} height={87} priority />
           </Link>
           <nav aria-label="Main navigation">
             {nav.map(([label, href]) => (
@@ -44,8 +44,7 @@ export default function RootLayout({
         <footer className="site-footer">
           <div>
             <Link className="brand footer-brand" href="/">
-              <Image className="footer-logo" src="/brand/circle-logo.png" alt="I Have AuDHD" width={100} height={100} />
-              <span className="brand-name"><em>i have</em> <strong><i>au</i>DHD</strong></span>
+              <Image className="footer-horizontal-logo" src="/brand/header-logo.png" alt="I Have AuDHD" width={300} height={70} />
             </Link>
             <p>Understanding your brain can change how you understand your life.</p>
           </div>
