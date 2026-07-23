@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 };
 
 const nav = [
-  ["Home", "/"],
   ["About", "/about"],
   ["The Science", "/the-science"],
   ["Resources", "/resources"],
